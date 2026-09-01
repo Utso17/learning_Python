@@ -1,15 +1,10 @@
-# x = float(input("What's X? :"))
-# y = float(input("what's Y? :"))
-
-# z = x / y
-
-# print((z))
-
-def hello(to = "world"):
-    print("Hello,", to)
-
 def main():
-    name = input("What's your name? :")
-    hello(name)
+    x = int(input("What's x? "))
+    print("x squared is", square(x))
+
+
+def square(n):
+    return n * n
+
 
 main()
