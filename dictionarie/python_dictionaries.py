@@ -57,20 +57,33 @@
 dirty_data = {
     "Alice": ["85", " 90", ""],
     "Bob": [72, "not_a_number", "88 "],
-    "Charlie": ["95", True, 100]  # Note: True is technically an int in Python, filter it out!
+    "Charlie": ["95", True, 100] 
 }
 
+def clean_data(data):
+    no_data = {}
 
-for name, numbers in dirty_data.items():
-    if numbers == str:
-        print (int(numbers)) and 
+    for name , scores in data.items():
+        valid_score = {}
+        count = 0
+
+        for score in scores:
+            if type(score) == bool:
+                continue
+
+            if type(score) == int or type(score) == float:
+                valid_score[count] = score
+                count += 1
+                continue
+
+            if type(score) == str:
+                
+
+        
+
+
+
     
-
-def data(datas):
-    for name, numbers in datas.items():
-        print({name}, {numbers})
-
-print(data(dirty_data))
 
 
 # Task 2: The E-Commerce Cart Optimizer
