@@ -14,7 +14,7 @@ def sub():
     z = num1 - num2
     return z
 
-def mul1():
+def mul():
     num1, num2 = get_number()
     z = num1 * num2
     return z
