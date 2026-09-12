@@ -1,6 +1,7 @@
 import random
 
 random_number = random.randint(1, 100)
+attempt = 7
 
 while True:
     user_input = input("Enter a number between 1-100: ")
@@ -14,11 +15,18 @@ while True:
     if gussed_number < 1 or gussed_number > 100:
         print("Number must be between 1-100")
         continue
+    if attempt == 0:
+        print("You lose!")
+        break
 
     if random_number < gussed_number:
+        attempt -= 1
         print("Too High!")
+        print(f"Attempt Remaining: {attempt}")
     elif random_number > gussed_number:
+        attempt -= 1
         print("Too Low!")
+        print(f"Attempt Remaining: {attempt}")
     else:
         print("Congrats you gussed the correct number!!")
         break
